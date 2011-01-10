@@ -23,9 +23,45 @@ header { display: block; }
 
 hgroup{
 margin-top: 10px;
+float:  left;
 }
 hgroup img {margin: 0;}
+.IconBar {
+	float: right;
+	margin-top: 30px;
+}
+.IconBar-Left, .IconBar-Right, .IconBar-Links a {
+	float: left;
+}
+.IconBar-Left {
+	margin-top: 10px;
+}
+.IconBar-Right span {
+	color: white;
+	float: left;
+    display: block;
+    font-size: 11px;
+    margin: -12px 100px 0 5px;
+    padding: 0 0 0 0;
+}
+.IconBar-Right span a{
+	color: white;
+	text-align: left;
+	float: none;
+}
 
+.IconBar-Links{
+	height: 32px;
+}
+
+.IconBar-Links img {
+	margin: 0;
+}
+
+.clear {
+	clear: both;
+	height: 1px;
+}
 .content {
   color: #222222;
   background: #fff;
@@ -147,8 +183,6 @@ position:absolute;
 right:0;
 top:2em;
 }
-
-
 
 /* Footer styling: */
 

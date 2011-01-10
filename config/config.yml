@@ -4,9 +4,18 @@ defaults: &defaults
   noreply: noreply@fs-rails3-base.heroku.com
   host: localhost:3000
   identities:
+    google_apps:
+      icon: social-icons/google_64.png
+    yahoo:
+      icon: social-icons/yahoo_64.png
     twitter:
       key: Ank92dam8rUTSfBtxN7AWg
       secret: kl95VO9BWzb6a4NL8dZJbosJMm4kmiGPoC0LKvdV6OI
+      icon: social-icons/twitter_64.png
+    facebook:
+      key: 147749211905466
+      secret: b682557c3bc08512d09ebc4b848d8d93
+      icon: social-icons/facebook_64.png
 
 development:
   <<: *defaults

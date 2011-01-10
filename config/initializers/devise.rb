@@ -1,5 +1,8 @@
 # Use this hook to configure devise mailer, warden hooks and so forth. The first
 # four configuration values can also be set straight in your models.
+
+require 'openid/store/filesystem'
+
 Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in DeviseMailer.
@@ -160,6 +163,12 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   config.omniauth :twitter, configatron.identities.twitter.key, configatron.identities.twitter.secret
+  config.omniauth :facebook, configatron.identities.facebook.key, configatron.identities.facebook.secret
+  config.omniauth :google_apps, OpenID::Store::Filesystem.new('/tmp'), :domain => 'gmail.com'
+  
+  #config.omniauth :open_id, OpenID::Store::Filesystem.new('/tmp')
+  #config.omniauth :yahoo, OpenID::Store::Filesystem.new('/tmp'), :domain => "yahoo.com"
+  #config.omniauth :myspace, OpenID::Store::Filesystem.new('/tmp'), :domain => "myspace.com"
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
